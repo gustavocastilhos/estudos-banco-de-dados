@@ -31,3 +31,36 @@ PRIMARY KEY (idpeca),
 FOREIGN KEY (fornecedor_id)
 REFERENCES fornecedor (idfornecedor)
 );
+
+-- Apagar chave estrangeira
+ALTER TABLE vaga
+DROP FOREIGN KEY vaga_ibfk_1;
+
+-- adicionar chave estrangeira
+ALTER TABLE vaga
+ADD  FOREIGN KEY (setor_id)
+REFERENCES setor (id_setor);
+
+
+-- adicionar coluna
+
+ALTER TABLE ticket 
+ADD COLUMN descricao TEXT;
+
+-- Modificar o tipo de dado de uma coluna
+ALTER TABLE ticket 
+MODIFY COLUMN descricao VARCHAR(100);
+
+
+-- apagar coluna
+ALTER TABLE ticket
+DROP COLUMN descricao;
+
+-- renomear coluna
+
+ALTER TABLE ticket
+RENAME COLUMN codigo_barra to 
+
+-- Mudar o nome da tabela
+ALTER TABLE estacionamento
+RENAME TO parking;
