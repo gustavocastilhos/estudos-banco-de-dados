@@ -62,3 +62,7 @@ RENAME COLUMN codigo_barra to
 -- Mudar o nome da tabela
 ALTER TABLE estacionamento
 RENAME TO parking;
+
+-- Descrever setor
+DESCRIBE setor;
+DESCRIBE ticket;
