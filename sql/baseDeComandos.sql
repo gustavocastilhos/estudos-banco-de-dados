@@ -41,7 +41,6 @@ ALTER TABLE vaga
 ADD  FOREIGN KEY (setor_id)
 REFERENCES setor (id_setor);
 
-
 -- adicionar coluna
 
 ALTER TABLE ticket 
@@ -50,7 +49,6 @@ ADD COLUMN descricao TEXT;
 -- Modificar o tipo de dado de uma coluna
 ALTER TABLE ticket 
 MODIFY COLUMN descricao VARCHAR(100);
-
 
 -- apagar coluna
 ALTER TABLE ticket
