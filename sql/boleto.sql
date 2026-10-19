@@ -49,3 +49,9 @@ SELECT cliente.nome, count(Mensalidade.status_pagamento),sum(Mensalidade.valor),
 JOIN Cliente
 ON Cliente.id_cliente = Mensalidade.cliente_id
 GROUP BY cliente.nome;
+
+
+SELECT cliente.nome, count(Mensalidade.status_pagamento),sum(Mensalidade.valor),avg(mensalidade.valor) AS valor_medio FROM Mensalidade
+JOIN Cliente
+ON Cliente.id_cliente = Mensalidade.cliente_id
+GROUP BY cliente.nome;
